@@ -394,6 +394,7 @@ async function listAllUnlabeledData(projectId: number) {
                 labels: '',
                 offset: offset,
                 limit: limit,
+                proposedActionsJobId: proposeActionsJobId,
             });
             if (ret.samples.length === 0) {
                 break;
@@ -413,6 +414,7 @@ async function listAllUnlabeledData(projectId: number) {
                 labels: '',
                 offset: offset,
                 limit: limit,
+                proposedActionsJobId: proposeActionsJobId,
             });
             if (ret.samples.length === 0) {
                 break;
@@ -447,6 +449,7 @@ async function listDataByIds(projectId: number, ids: number[]) {
                 labels: '',
                 offset: offset,
                 limit: limit,
+                proposedActionsJobId: proposeActionsJobId,
             });
             if (ret.samples.length === 0) {
                 break;
@@ -466,6 +469,7 @@ async function listDataByIds(projectId: number, ids: number[]) {
                 labels: '',
                 offset: offset,
                 limit: limit,
+                proposedActionsJobId: proposeActionsJobId,
             });
             if (ret.samples.length === 0) {
                 break;
@@ -500,6 +504,7 @@ async function listAllVideos(projectId: number) {
                 labels: '',
                 offset: offset,
                 limit: limit,
+                proposedActionsJobId: proposeActionsJobId,
             });
             if (ret.samples.length === 0) {
                 break;
@@ -517,6 +522,7 @@ async function listAllVideos(projectId: number) {
                 labels: '',
                 offset: offset,
                 limit: limit,
+                proposedActionsJobId: proposeActionsJobId,
             });
             if (ret.samples.length === 0) {
                 break;
