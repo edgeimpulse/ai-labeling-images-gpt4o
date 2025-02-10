@@ -212,9 +212,9 @@ if (dataIdsFile) {
                     const resp = await openai.chat.completions.create({
                         model: model,
                         messages: [{
-                        role: 'system',
-                        content: `You always respond with the following JSON structure, regardless of the prompt: \`{ "label": "XXX", "reason": "YYY" }\`. ` +
-                                `Put the requested answer in 'label', and put your reasoning in 'reason'.`,
+                            role: 'system',
+                            content: `You always respond with the following JSON structure, regardless of the prompt: \`{ "label": "XXX", "reason": "YYY" }\`. ` +
+                                    `Put the requested answer in 'label', and put your reasoning in 'reason'.`,
                         }, {
                             role: 'user',
                             content: [{
