@@ -227,7 +227,10 @@ if (dataIdsFile) {
                                     detail: imageQualityArgv,
                                 }
                             }]
-                        }]
+                        }],
+                        response_format: {
+                            type: 'json_object'
+                        },
                     });
 
                     // console.log('resp', JSON.stringify(resp, null, 4));
