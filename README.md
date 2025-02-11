@@ -1,10 +1,12 @@
-# AI Actions block: LLM-based labeling with GPT4o
+# AI labeling block: LLM-based labeling with GPT4o
 
-This is an Edge Impulse [AI Actions block](https://docs.edgeimpulse.com/docs/edge-impulse-studio/organizations/custom-blocks/transformation-blocks) that uses GPT4o to label your image data. You can use this repo as the basis for custom tasks that use LLMs to help with labeling or data quality tasks in your project.
+This is an Edge Impulse [AI labeling block](https://docs.edgeimpulse.com/docs/edge-impulse-studio/organizations/custom-blocks/transformation-blocks) that uses GPT4o to label your image data. You can use this repo as the basis for custom tasks that use LLMs to help with labeling or data quality tasks in your project.
 
-## Use this from Edge Impulse (professional / enterprise)
+## Use this from Edge Impulse
 
-If you just want to use GPT4o as a labeling tool in your Edge Impulse project you don't need this repo. Just go to any project, select **Data acquisition > AI Actions**, choose **Label images using GPT4o** (available for professional and enterprise projects only).
+If you just want to use GPT4o as a labeling tool in your Edge Impulse project you don't need this repo. Just go to any project, select **Data acquisition > AI labeling**, choose **Label images using GPT4o**.
+
+> You'll need an OpenAI API Key, see [OpenAI Platform > API Keys](https://platform.openai.com/api-keys).
 
 ## Developing your own block
 
@@ -58,8 +60,8 @@ If you've modified this block, you can push it back to Edge Impulse so it's avai
     $ edge-impulse-blocks push
     ```
 
-3. Afterwards, you can run your block through **Data acquisition > AI Actions** in any Edge Impulse project.
+3. Afterwards, you can run your block through **Data acquisition > AI labeling** in any Edge Impulse project.
 
 ### Proposed changes
 
-AI Actions blocks should be able to run in 'preview' mode (triggered when you click *Label preview data* in the Studio) - where changes are _staged_ but not directly applied. If this is the case `--propose-actions <job-id>` is passed into your block. When you see this flag you should not apply changes directly (e.g. via `api.rawData.editLabel`) but rather use the `setSampleProposedChanges` API. Search for this API in [llm-labeling.ts](llm-labeling.ts) to see how this should be used.
+AI labeling blocks should be able to run in 'preview' mode (triggered when you click *Label preview data* in the Studio) - where changes are _staged_ but not directly applied. If this is the case `--propose-actions <job-id>` is passed into your block. When you see this flag you should not apply changes directly (e.g. via `api.rawData.editLabel`) but rather use the `setSampleProposedChanges` API. Search for this API in [llm-labeling.ts](llm-labeling.ts) to see how this should be used.
